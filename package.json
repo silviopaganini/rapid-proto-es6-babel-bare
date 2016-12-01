@@ -4,7 +4,8 @@
   "description": "rapid prototyping with es6 and babel, budo as a server",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js --live -- -t [ babelify --presets es2015 ]",
+    "start": "budo index.js --serve . --title Prototype --live -- -t [ babelify --presets es2015 ]",
+    "build": "browserify -t [ babelify --presets es2015 ] index.js > bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Silvio Paganini <s2paganini@gmail.com>",
