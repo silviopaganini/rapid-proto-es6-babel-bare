@@ -1,0 +1,19 @@
+{
+  "name": "rapid-es6-babel",
+  "version": "1.0.0",
+  "description": "rapid prototyping with es6 and babel, budo as a server",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js --live -- -t [ babelify --presets es2015 ]",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silvio Paganini <s2paganini@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "budo": "^9.2.2",
+    "eslint": "^3.11.1"
+  }
+}
