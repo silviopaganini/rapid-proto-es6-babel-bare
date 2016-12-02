@@ -1,5 +1,5 @@
 export default class App {
   constructor() {
-    console.log('hello');
+    console.log('1');
   }
 }
