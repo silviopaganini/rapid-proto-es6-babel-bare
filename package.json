@@ -4,14 +4,16 @@
   "description": "rapid prototyping with es6 and babel, budo as a server",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js:bundle.js --title Prototype --live -- -t [ babelify --presets es2015 ]",
-    "build": "browserify -t [ babelify --presets es2015 ] index.js > bundle.js",
+    "clean" : "rm -rf build && mkdir build",
+    "start": "budo index.js:bundle.js --title Prototype --live -- -t [ babelify ]",
+    "build": "npm run clean && browserify -t [ babelify ] index.js > build/bundle.js && cp index.html build/index.html && cp style.css build/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Silvio Paganini <s2paganini@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
     "budo": "^9.2.2",
