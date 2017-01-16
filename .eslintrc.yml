@@ -3,6 +3,8 @@ env:
 extends: 'eslint:recommended'
 parser: "babel-eslint"
 rules:
+  no-console:
+    - 1
   indent:
     - error
     - 2

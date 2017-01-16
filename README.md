@@ -6,14 +6,27 @@
 - Class properties 
 
 ### Usage
-```js
+```bash
 npm install
 npm start
 ```
 
 ### Build
-Creates a build folder with `index.html`, `style.css` and `bundle.js` that are sitting on the root folder
+Creates a build folder with `index.html`, `style.css` and `bundle.js` from `./src`
 
-```js
+```bash
 npm run build
+npm run build:run #builds and start local server to test the build
+```
+
+### Test
+
+ESLint for JS
+```bash 
+npm test
+```
+
+### Lint & fix
+```bash 
+npm run lint:fix
 ```
